@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Image
           className="rounded-lg border border-border object-cover"
           src={project.companyLogoImg}
-          alt="img"
+          alt={project.companyName}
           fill
         />
       </div>
@@ -25,6 +25,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <h5 className="text-2xl font-bold tracking-tight text-foreground">
           {project.companyName}
         </h5>
+        {project.status && (
+          <span className="w-fit rounded-full border border-[hsl(var(--palette-sand))] bg-[hsl(var(--palette-sand-soft))] px-3 py-1 text-xs font-medium text-primary">
+            {project.status}
+          </span>
+        )}
         <p className="line-clamp-3 font-normal text-muted-foreground flex-grow">
           {project.shortDescription}
         </p>

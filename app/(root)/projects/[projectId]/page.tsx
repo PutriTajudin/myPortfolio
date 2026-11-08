@@ -70,7 +70,14 @@ export default async function Project({ params }: ProjectPageProps) {
             )}
           </div>
         </h1>
-        <ChipContainer textArr={project.category} />
+        <div className="flex flex-wrap items-center gap-2">
+          <ChipContainer textArr={project.category} />
+          {project.status && (
+            <span className="rounded-full border border-[hsl(var(--palette-sand))] bg-[hsl(var(--palette-sand-soft))] px-3 py-1 text-xs font-medium text-primary">
+              {project.status}
+            </span>
+          )}
+        </div>
         <div className="mt-4 flex space-x-4">
           <Link
             href={siteConfig.links.github}

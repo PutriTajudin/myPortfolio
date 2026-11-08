@@ -5,6 +5,7 @@ export type ValidSkills =
   | "Nest.js"
   | "express.js"
   | "Node.js"
+  | "PDFKit"
   | "MongoDB"
   | "Typescript"
   | "Javascript"
@@ -90,7 +91,7 @@ export type ValidCategory =
   | "Mobile Dev"
   | "3D Modeling";
 
-export type ValidExpType = "Personal" | "Professional";
+export type ValidExpType = "Personal" | "Professional" | "Academic";
 
 export type ValidPages =
   | "home"

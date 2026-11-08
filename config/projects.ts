@@ -14,6 +14,7 @@ interface DescriptionDetailsInterface {
 export interface ProjectInterface {
   id: string;
   type: ValidExpType;
+  status?: "In Progress" | "Completed";
   companyName: string;
   category: ValidCategory[];
   shortDescription: string;
@@ -28,6 +29,58 @@ export interface ProjectInterface {
 }
 
 export const Projects: ProjectInterface[] = [
+  {
+    id: "bengkelin-aja",
+    companyName: "BengkelinAja",
+    type: "Academic",
+    status: "In Progress",
+    category: ["Backend", "Web Dev"],
+    shortDescription:
+      "Built backend features for a motorcycle workshop management system, including PDF service receipts, WhatsApp notifications, and public service-status tracking.",
+    githubLink: "https://github.com/nabil-boernama/BengkelinAja",
+    techStack: ["Node.js", "express.js", "MongoDB", "PDFKit"],
+    startDate: new Date("2026-09-29"),
+    endDate: new Date("2026-11-08"),
+    companyLogoImg: "/projects/bengkelin-aja/service-receipt.png",
+    pagesInfoArr: [
+      {
+        title: "Order Status Update",
+        description:
+          "Update a service order's status through the API and receive a successful response.",
+        imgArr: ["/projects/bengkelin-aja/order-status.png"],
+      },
+      {
+        title: "WhatsApp Notifications",
+        description:
+          "Create a pre-filled WhatsApp message link so workshop staff can notify customers about their service status.",
+        imgArr: ["/projects/bengkelin-aja/whatsapp-notification.png"],
+      },
+      {
+        title: "PDF Service Receipts",
+        description:
+          "Generate an A5 PDF receipt with customer, vehicle, service, parts, and total-cost details for completed service orders.",
+        imgArr: ["/projects/bengkelin-aja/service-receipt.png"],
+      },
+      {
+        title: "Public Service Tracking",
+        description:
+          "Let customers check a service order's status using its queue number and vehicle plate, with rate limiting on the public endpoint.",
+        imgArr: ["/projects/bengkelin-aja/public-tracking.png"],
+      },
+    ],
+    descriptionDetails: {
+      paragraphs: [
+        "BengkelinAja is a group academic project that digitizes service-order and spare-parts workflows for a motorcycle workshop. I contributed backend features for service receipts, customer notifications, and public service tracking.",
+        "The API features were tested with Postman, including successful responses for PDF receipt generation, WhatsApp link generation, and public status tracking.",
+      ],
+      bullets: [
+        "Generated PDF service receipts containing service and cost details.",
+        "Built an endpoint that creates a pre-filled WhatsApp notification link for a service order.",
+        "Implemented public service-status lookup by queue number and vehicle plate, with request rate limiting.",
+        "Collaborated with a team building authentication, customer and order management, inventory, and reporting features.",
+      ],
+    },
+  },
   {
     id: "tmdb-movie-data-preprocessing-pca",
     companyName: "TMDB Movie Data Preprocessing & PCA",
