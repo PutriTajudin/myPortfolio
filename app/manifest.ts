@@ -2,14 +2,14 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Naman Barkiya | Applied AI Engineer",
-    short_name: "Naman Barkiya",
+    name: "Putri Tajudin | Information Engineering Student",
+    short_name: "Putri Tajudin",
     description:
-      "Naman Barkiya - Applied AI Engineer working at the intersection of AI, data, and scalable software systems.",
+      "Putri Tajudin is an Information Engineering undergraduate at Universitas Gadjah Mada with experience in event coordination and digital content.",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#000000",
+    background_color: "#FFFFF2",
+    theme_color: "#FFFFF2",
     icons: [
       {
         src: "/favicon.ico",
@@ -25,11 +25,10 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     categories: [
       "portfolio",
-      "ai",
-      "software engineering",
-      "machine learning",
-      "developer",
-      "web development",
+      "information engineering",
+      "event operations",
+      "social media",
+      "student",
     ],
     lang: "en",
     dir: "ltr",

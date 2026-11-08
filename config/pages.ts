@@ -18,32 +18,25 @@ export const pagesConfig: PagesConfig = {
     description: "Welcome to my portfolio website.",
     metadata: {
       title: "Home",
-      description: "Naman Barkiya's portfolio website.",
+      description: "Putri Tajudin's portfolio website.",
     },
   },
   skills: {
     title: "Skills",
-    description: "Key skills that define my professional identity.",
+    description: "Selected technical skills and tools from my experience.",
     metadata: {
       title: "Skills",
       description:
-        "Naman Barkiya's key skills that define his professional identity.",
+        "Putri Tajudin's key skills that define her professional identity.",
     },
   },
   projects: {
     title: "Projects",
-    description: "Showcasing impactful projects and technical achievements.",
+    description: "Data analysis and technology projects.",
     metadata: {
       title: "Projects",
-      description: "Naman Barkiya's projects in building web applications.",
-    },
-  },
-  contact: {
-    title: "Contact",
-    description: "Let's connect and explore collaborations.",
-    metadata: {
-      title: "Contact",
-      description: "Contact Naman Barkiya.",
+      description:
+        "Putri Tajudin's data analysis and technology projects.",
     },
   },
   contributions: {
@@ -52,34 +45,45 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Contributions",
       description:
-        "Naman Barkiya's open-source contributions and community involvement.",
+        "Putri Tajudin's open-source contributions and community involvement.",
     },
   },
   resume: {
     title: "Resume",
-    description: "Naman Barkiya's resume.",
+    description: "Putri Tajudin's resume.",
     metadata: {
       title: "Resume",
-      description: "Naman Barkiya's resume.",
+      description: "Putri Tajudin's resume.",
+    },
+  },
+  certificates: {
+    title: "Coursework & Certificates",
+    description:
+      "A selection of course certificates completed alongside my university coursework.",
+    metadata: {
+      title: "Coursework & Certificates",
+      description:
+        "Selected Cisco Networking Academy and DataCamp course certificates earned by Putri Tajudin.",
     },
   },
   blogs: {
     title: "Blogs",
     description:
-      "Thoughts on AI, software engineering, and building in public.",
+      "Articles and notes on data analysis and technology.",
     metadata: {
       title: "Blogs",
       description:
-        "Naman Barkiya's blog — thoughts on AI, software engineering, and building in public.",
+        "Articles and notes by Putri Tajudin on data analysis and technology.",
     },
   },
   experience: {
     title: "Experience",
-    description: "Professional journey and career timeline.",
+    description:
+      "Selected university and community roles in event operations, human resources, and digital content.",
     metadata: {
       title: "Experience",
       description:
-        "Naman Barkiya's professional journey and experience timeline.",
+        "Putri Tajudin's selected university and community experience in event operations, human resources, and digital content.",
     },
   },
 };

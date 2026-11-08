@@ -31,19 +31,26 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex gap-2 flex-wrap">
           <ChipContainer textArr={project.category} />
         </div>
-        <Link href={`/projects/${project.id}`} className="mt-auto">
-          <Button variant={"default"} className="mt-2 w-full sm:w-auto">
-            Read more
-            <Icons.chevronRight className="w-4 ml-1" />
-          </Button>
-        </Link>
-      </div>
-      <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border hidden md:block">
-        {project.type === "Personal" ? (
-          <Icons.userFill className="h-4 w-4" />
-        ) : (
-          <Icons.work className="h-4 w-4" />
-        )}
+        <div className="mt-auto flex flex-wrap gap-2 pt-2">
+          <Link href={`/projects/${project.id}`}>
+            <Button variant="default">
+              Read more
+              <Icons.chevronRight className="ml-1 w-4" />
+            </Button>
+          </Link>
+          {project.githubLink && (
+            <Button variant="outline" asChild>
+              <Link
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icons.gitHub className="mr-2 h-4 w-4" />
+                Repository
+              </Link>
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

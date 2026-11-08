@@ -10,15 +10,12 @@ import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
-import profileImg from "@/public/profile-img.jpg";
 
 interface ProjectPageProps {
   params: Promise<{
     projectId: string;
   }>;
 }
-
-const githubUsername = "namanbarkiya";
 
 export default async function Project({ params }: ProjectPageProps) {
   const { projectId } = await params;
@@ -51,14 +48,22 @@ export default async function Project({ params }: ProjectPageProps) {
           <div className="flex items-center">
             {project.githubLink && (
               <CustomTooltip text="Link to the source code.">
-                <Link href={project.githubLink} target="_blank">
+                <Link
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
                 </Link>
               </CustomTooltip>
             )}
             {project.websiteLink && (
               <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
-                <Link href={project.websiteLink} target="_blank">
+                <Link
+                  href={project.websiteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
                 </Link>
               </CustomTooltip>
@@ -71,16 +76,15 @@ export default async function Project({ params }: ProjectPageProps) {
             href={siteConfig.links.github}
             className="flex items-center space-x-2 text-sm"
           >
-            <Image
-              src={profileImg}
-              alt={"naman"}
-              width={42}
-              height={42}
-              className="rounded-full bg-background"
-            />
+            <span className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-muted">
+              <Icons.userFill
+                className="h-5 w-5 text-muted-foreground"
+                aria-hidden="true"
+              />
+            </span>
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Naman Barkiya"}</p>
+              <p className="font-medium">{siteConfig.authorName}</p>
               <p className="text-[12px] text-muted-foreground">
                 @{siteConfig.username}
               </p>
